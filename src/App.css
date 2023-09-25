@@ -1,0 +1,52 @@
+.App {
+  padding: 15px 10px;
+  color: rgba(113, 58, 18, 0.8);
+  margin: 0 auto;
+  font-family: "Quicksand", sans-serif;
+  color: rgb(156, 147, 154);
+}
+
+.App footer {
+  font-weight: 800;
+  filter: sepia(20%);
+  font-size: 14px;
+  color: rgba(113, 58, 18, 0.9);
+}
+
+.App .emojiColor {
+  color: rgb(210, 71, 117);
+  font-size: 20px;
+}
+
+.App footer a {
+  color: rgba(113, 58, 18, 0.9);
+}
+
+@media (max-width: 600px) {
+  .App {
+    padding: 0;
+  }
+
+  .App .container {
+    padding: 0;
+  }
+
+  .App footer {
+    font-size: 8px;
+  }
+
+  .App .emojiColor {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .App h1 {
+    padding-top: 20px;
+    font-size: 42px;
+  }
+
+  .App h2 {
+    font-size: 16px;
+  }
+}
