@@ -1,8 +1,12 @@
+import Dictionary from "./Dictionary";
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
+      <div className="container">
+        <Dictionary />
+      </div>
       <footer className="text-center">
         <small>
           Coded with <span className="emojiColor">♥️</span> by{" "}
