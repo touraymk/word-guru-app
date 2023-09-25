@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       <div className="container">
-        <Dictionary />
+        <Dictionary defaultKeyword="unicorn" />
       </div>
       <footer className="text-center">
         <small>
