@@ -6,6 +6,7 @@ import "./Dictionary.css";
 export default function Dictionary(props) {
   let [keyword, setKeyword] = useState(props.defaultKeyword);
   let [results, setResults] = useState(false);
+  let [loaded, setLoaded] = useState(null);
 
   function handleDictionResponse(response) {
     setResults(response.data);
@@ -29,21 +30,31 @@ export default function Dictionary(props) {
     setKeyword(event.target.value);
   }
 
-  return (
-    <div className="Dictionary p-5 shadow">
-      <section className="header">
-        <h1>Word Guru 📖</h1>
-        <h2>What word would you like to look up?</h2>
-        <form onSubmit={handleSubmit}>
-          <input
-            type="search"
-            onChange={handleKeywordChange}
-            placeholder="unicorn"
-            autoFocus={true}
-          />
-        </form>
-      </section>
-      <Results results={results} />
-    </div>
-  );
+  function load() {
+    setLoaded(true);
+    search();
+  }
+
+  if (loaded) {
+    return (
+      <div className="Dictionary p-5 shadow">
+        <section className="header">
+          <h1>Word Guru 📖</h1>
+          <h2>What word would you like to look up?</h2>
+          <form onSubmit={handleSubmit}>
+            <input
+              type="search"
+              onChange={handleKeywordChange}
+              placeholder="unicorn"
+              autoFocus={true}
+            />
+          </form>
+        </section>
+        <Results results={results} />
+      </div>
+    );
+  } else {
+    load();
+    return null;
+  }
 }
