@@ -37,7 +37,7 @@ export default function Dictionary(props) {
 
   if (loaded) {
     return (
-      <div className="Dictionary p-5 shadow">
+      <div className="Dictionary shadow">
         <section className="header">
           <h1>Word Guru 📖</h1>
           <h2>What word would you like to look up?</h2>

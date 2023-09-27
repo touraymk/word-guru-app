@@ -18,3 +18,9 @@
 .Meaning p::first-letter {
   text-transform: capitalize;
 }
+
+@media (max-width: 600px) {
+  .Meaning p {
+    font-size: 14px;
+  }
+}
