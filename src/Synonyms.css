@@ -1,0 +1,13 @@
+.Synonyms ul {
+  font-size: 18px;
+  padding: 0;
+  margin: 0;
+}
+
+.Synonyms li {
+  list-style: none;
+}
+
+.Synonyms li::first-letter {
+  text-transform: capitalize;
+}
