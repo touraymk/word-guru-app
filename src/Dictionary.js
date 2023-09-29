@@ -8,15 +8,15 @@ export default function Dictionary(props) {
   let [keyword, setKeyword] = useState(props.defaultKeyword);
   let [results, setResults] = useState(false);
   let [loaded, setLoaded] = useState(null);
-  let [photo, setPhoto] = useState(null);
+  let [photos, setPhotos] = useState(null);
 
   function handleDictionResponse(response) {
     setResults(response.data);
   }
 
   function handlePexelResponse(response) {
-    setPhoto(response.data);
-    console.log(response.data);
+    setPhotos(response.data.photos);
+    console.log(response.data.photos);
   }
 
   function search() {
@@ -64,7 +64,7 @@ export default function Dictionary(props) {
           </form>
         </section>
         <Results results={results} />
-        <Photo photo={photo} />
+        <Photo photos={photos} />
       </div>
     );
   } else {
