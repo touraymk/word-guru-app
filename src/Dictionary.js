@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Results from "./Results";
+import Photo from "./Photo";
 import "./Dictionary.css";
 
 export default function Dictionary(props) {
@@ -63,6 +64,7 @@ export default function Dictionary(props) {
           </form>
         </section>
         <Results results={results} />
+        <Photo photo={photo} />
       </div>
     );
   } else {
