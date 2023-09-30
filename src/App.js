@@ -10,11 +10,19 @@ function App() {
       <footer className="text-center">
         <small>
           Coded with <span className="emojiColor">♥️</span> by{" "}
-          <a href="https://monumental-malasada-41cd9f.netlify.app">
+          <a
+            href="https://monumental-malasada-41cd9f.netlify.app"
+            target="_blank"
+            rel="noreferrer"
+          >
             Mariama Touray
           </a>{" "}
           and is{" "}
-          <a href="https://github.com/touraymk/dictionary-react-app">
+          <a
+            href="https://github.com/touraymk/dictionary-react-app"
+            target="_blank"
+            rel="noreferrer"
+          >
             open-sourced
           </a>
         </small>
